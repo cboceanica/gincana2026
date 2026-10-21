@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Regras da Gincana 2026 · ATOS · JUVCBO</title>
+<meta name="description" content="Todas as regras da Gincana 2026 da JUVCBO: provas, entregas, datas e pontuação.">
+<meta name="theme-color" content="#0A7CC4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🏆%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0B1F3A;
+    --blue: #0A7CC4;
+    --blue-soft: #E3F1FA;
+    --green: #AFD137;
+    --green-soft: #F0F7D6;
+    --orange: #FDB444;
+    --orange-soft: #FFF1D9;
+    --bg: #F4F9FC;
+    --card: #FFFFFF;
+    --text: #1B2B3F;
+    --muted: #5A6B7F;
+    --line: #DCE7F0;
+    --radius: 20px;
+    --font-head: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+    --font-body: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--bg);
+  }
+  img { max-width: 100%; height: auto; display: block; }
+  a { color: var(--blue); }
+  :focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; border-radius: 6px; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    text-align: center;
+    padding: 2rem 1.25rem 5.5rem;
+    background:
+      radial-gradient(900px 300px at 50% -10%, #ffffff 0%, rgba(255,255,255,0) 70%),
+      linear-gradient(180deg, #D8EDFA 0%, var(--bg) 100%);
+    overflow: hidden;
+  }
+  .hero .logo-juv { width: min(240px, 58vw); margin: 0 auto 0.25rem; }
+  .hero .logo-atos { width: min(380px, 86vw); margin: 0 auto; }
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(2rem, 8vw, 3.25rem);
+    line-height: 1.05;
+    margin: 0.25rem 0 0.5rem;
+    color: var(--navy);
+  }
+  .hero h1 span { color: var(--blue); }
+  .hero p { margin: 0 auto; max-width: 34rem; color: var(--muted); font-weight: 600; }
+  .wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: 56px; }
+
+  /* ---------- LAYOUT ---------- */
+  main { max-width: 820px; margin: 0 auto; padding: 0 1.1rem 4rem; }
+  h2.section {
+    font-family: var(--font-head);
+    font-size: 1.5rem;
+    margin: 2.5rem 0 0.9rem;
+    color: var(--navy);
+    display: flex; align-items: center; gap: .6rem;
+  }
+  h2.section::before {
+    content: ""; width: 10px; height: 1.5rem; border-radius: 6px;
+    background: linear-gradient(180deg, var(--green), var(--blue));
+  }
+
+  /* ---------- DATAS-CHAVE ---------- */
+  .dates {
+    display: grid; gap: .75rem;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    margin-top: -3.2rem; position: relative; z-index: 2;
+  }
+  .date-card {
+    background: var(--card); border-radius: var(--radius);
+    padding: 1rem 1.1rem; border: 1px solid var(--line);
+    box-shadow: 0 6px 18px rgba(11,31,58,.07);
+  }
+  .date-card strong {
+    display: block; font-family: var(--font-head); font-size: 1.9rem; line-height: 1; color: var(--blue);
+  }
+  .date-card:nth-child(2) strong { color: #8FB01C; }
+  .date-card:nth-child(3) strong { color: #E9930F; }
+  .date-card span { display: block; margin-top: .3rem; font-weight: 700; font-size: .95rem; color: var(--text); }
+  .date-card small { color: var(--muted); font-weight: 600; }
+
+  /* ---------- ÍNDICE ---------- */
+  .index {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; gap: .5rem; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  }
+  .index a {
+    display: flex; align-items: center; gap: .65rem;
+    text-decoration: none; color: var(--navy); font-weight: 700;
+    background: var(--card); border: 1px solid var(--line);
+    padding: .6rem .8rem; border-radius: 14px; min-height: 48px;
+    transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  }
+  .index a:hover { transform: translateY(-2px); border-color: var(--blue); box-shadow: 0 4px 12px rgba(10,124,196,.15); }
+  .index .n {
+    flex: none; width: 2rem; height: 2rem; border-radius: 50%;
+    display: grid; place-items: center;
+    font-family: var(--font-head); font-size: .95rem; font-weight: 800; color: #fff; background: var(--blue);
+  }
+  .index li:nth-child(3n+2) .n { background: var(--green); color: var(--navy); }
+  .index li:nth-child(3n+3) .n { background: var(--orange); color: var(--navy); }
+
+  /* ---------- CARDS DE REGRAS ---------- */
+  .rules { display: grid; gap: 1rem; }
+  .rule {
+    --accent: var(--blue); --accent-soft: var(--blue-soft); --on-accent: #fff;
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: var(--radius); overflow: hidden;
+    box-shadow: 0 4px 14px rgba(11,31,58,.05);
+    scroll-margin-top: 1rem;
+  }
+  .rule:nth-child(3n+2) { --accent: var(--green); --accent-soft: var(--green-soft); --on-accent: var(--navy); }
+  .rule:nth-child(3n+3) { --accent: var(--orange); --accent-soft: var(--orange-soft); --on-accent: var(--navy); }
+  .rule:target { box-shadow: 0 0 0 3px var(--accent), 0 8px 24px rgba(11,31,58,.12); }
+
+  .rule-head {
+    display: flex; align-items: center; gap: .9rem;
+    padding: .9rem 1.1rem; background: var(--accent-soft);
+    border-bottom: 3px solid var(--accent);
+  }
+  .rule-num {
+    flex: none; width: 2.8rem; height: 2.8rem; border-radius: 14px;
+    display: grid; place-items: center;
+    background: var(--accent); color: var(--on-accent);
+    font-family: var(--font-head); font-weight: 800; font-size: 1.3rem;
+  }
+  .rule-head h3 {
+    margin: 0; font-family: var(--font-head); font-weight: 800;
+    font-size: clamp(1.2rem, 4.6vw, 1.5rem); line-height: 1.15; color: var(--navy);
+  }
+  .tag {
+    display: inline-block; margin-top: .25rem;
+    font-size: .82rem; font-weight: 800; letter-spacing: .02em;
+    padding: .1rem .6rem; border-radius: 999px;
+    background: var(--navy); color: #fff;
+  }
+  .rule-body { padding: 1rem 1.2rem 1.2rem; }
+  .rule-body ul, .rule-body ol { margin: 0; padding-left: 1.25rem; }
+  .rule-body li { margin: .4rem 0; padding-left: .2rem; }
+  .rule-body ul > li::marker { color: var(--accent); font-size: 1.15em; }
+  .rule-body ol > li::marker { color: var(--blue); font-weight: 800; }
+  .rule-body strong { color: var(--navy); }
+  .sub {
+    margin: 1rem 0 .3rem; font-family: var(--font-head); font-weight: 700;
+    font-size: 1.05rem; color: var(--navy);
+  }
+
+  /* grupos */
+  .groups { display: flex; flex-wrap: wrap; gap: .6rem; margin: .5rem 0 .2rem; padding: 0; list-style: none; }
+  .groups li { margin: 0; padding: .45rem .9rem; border-radius: 999px; font-weight: 800; display: inline-flex; align-items: center; gap: .5rem; border: 2px solid var(--line); background: #fff; }
+  .groups li::before { content: ""; width: .85rem; height: .85rem; border-radius: 50%; background: currentColor; }
+  .groups .azul { color: var(--blue); }
+  .groups .verde { color: #7FA012; }
+  .groups li span { color: var(--text); }
+
+  /* pontuação alimentos */
+  .points { display: grid; gap: .5rem; margin: .5rem 0 0; padding: 0; list-style: none; }
+  .points li {
+    margin: 0; padding: .55rem .8rem; border-radius: 12px; background: var(--accent-soft);
+    display: flex; justify-content: space-between; align-items: center; gap: .8rem; font-weight: 600;
+  }
+  .points b {
+    flex: none; background: var(--accent); color: var(--on-accent);
+    font-family: var(--font-head); padding: 0 .7rem; border-radius: 999px; font-size: .95rem;
+  }
+
+  /* roteiro da entrevista */
+  details { margin-top: .9rem; border: 2px dashed var(--line); border-radius: 14px; background: #FBFDFF; }
+  summary {
+    cursor: pointer; list-style: none; padding: .75rem 1rem; font-weight: 800; color: var(--navy);
+    display: flex; align-items: center; justify-content: space-between; gap: .5rem; min-height: 48px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; font-family: var(--font-head); font-size: 1.5rem; color: var(--blue); line-height: 1; }
+  details[open] summary::after { content: "–"; }
+  details ol { padding: 0 1rem 1rem 2.4rem; }
+
+  /* ---------- RODAPÉ ---------- */
+  footer { text-align: center; padding: 2rem 1rem 3rem; color: var(--muted); font-weight: 600; font-size: .95rem; }
+  footer img { width: 150px; margin: 0 auto .5rem; }
+  .top {
+    position: fixed; right: 1rem; bottom: 1rem; z-index: 10;
+    width: 48px; height: 48px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--blue); color: #fff; text-decoration: none; font-size: 1.3rem; font-weight: 800;
+    box-shadow: 0 6px 16px rgba(10,124,196,.4);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .index a { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" id="topo">
+  <img class="logo-juv" src="assets/logo-juvcbo.png" alt="JUVCBO – Juventude">
+  <img class="logo-atos" src="assets/logo-atos.png" alt="ATOS – cruz entre chamas e ondas">
+  <h1>Regras da <span>Gincana 2026</span></h1>
+  <p>Tudo o que você precisa saber sobre as provas, entregas e pontuações. Leia com atenção e bora representar o seu grupo!</p>
+  <svg class="wave" viewBox="0 0 1440 56" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,28 C240,64 480,0 720,28 C960,56 1200,8 1440,30 L1440,56 L0,56 Z" fill="#F4F9FC"/>
+  </svg>
+</header>
+
+<main>
+
+  <section class="dates" aria-label="Datas importantes">
+    <div class="date-card"><strong>29/11</strong><span>Domingo · Entrega da maquete</span><small>A igreja vota</small></div>
+    <div class="date-card"><strong>04/12</strong><span>Sexta · Início do Acampadentro</span><small>Último dia da arrecadação de alimentos</small></div>
+    <div class="date-card"><strong>05/12</strong><span>Sábado · Dia da Gincana</span><small>Maioria das provas e entregas</small></div>
+  </section>
+
+  <h2 class="section">Índice</h2>
+  <ul class="index">
+    <li><a href="#quiz"><span class="n">1</span>Quiz Bíblico</a></li>
+    <li><a href="#escape"><span class="n">2</span>Escape Room</a></li>
+    <li><a href="#tessalonicenses"><span class="n">3</span>Prova de 1 Tessalonicenses</a></li>
+    <li><a href="#maquete"><span class="n">4</span>Maquete</a></li>
+    <li><a href="#entrevista"><span class="n">5</span>Entrevista com missionário</a></li>
+    <li><a href="#carta"><span class="n">6</span>Reescrever uma carta de Paulo</a></li>
+    <li><a href="#alimentos"><span class="n">7</span>Arrecadação de alimentos</a></li>
+    <li><a href="#evangelistica"><span class="n">8</span>Ação evangelística</a></li>
+    <li><a href="#pregacoes"><span class="n">9</span>Anotar as pregações</a></li>
+    <li><a href="#flashmob"><span class="n">10</span>Flash mob</a></li>
+    <li><a href="#desafios"><span class="n">11</span>Desafios das cartas</a></li>
+    <li><a href="#tribunal"><span class="n">12</span>Simulação do Tribunal</a></li>
+    <li><a href="#acampadentro"><span class="n">13</span>Acampadentro</a></li>
+  </ul>
+
+  <h2 class="section">As regras</h2>
+  <div class="rules">
+
+    <!-- 1 -->
+    <article class="rule" id="quiz">
+      <header class="rule-head">
+        <div class="rule-num">1</div>
+        <div><h3>Quiz Bíblico</h3><span class="tag">📅 Dia 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li><strong>20 questões:</strong> 15 valendo e 5 para desempate, se houver.</li>
+          <li>Um participante por equipe.</li>
+          <li>Cada equipe pode trocar o participante <strong>apenas 1 vez</strong>, depois da quinta pergunta.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="rule" id="escape">
+      <header class="rule-head">
+        <div class="rule-num">2</div>
+        <div><h3>Escape Room</h3><span class="tag">📅 Dia 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Uma equipe de <strong>4 pessoas</strong> por time.</li>
+          <li>Cronômetro de <strong>10 minutos</strong> na sala.</li>
+          <li>Ganha quem terminar o desafio em <strong>menos tempo</strong>.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="rule" id="tessalonicenses">
+      <header class="rule-head">
+        <div class="rule-num">3</div>
+        <div><h3>Prova de 1 Tessalonicenses</h3><span class="tag">📅 Dia 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Todos fazem a prova, com <strong>10 questões</strong>.</li>
+          <li>Ao terminar, os grupos têm <strong>2 minutos</strong> para conversar e escolher as provas das 3 pessoas que tiveram melhor desempenho.</li>
+          <li>As <strong>3 provas escolhidas</strong> de cada time são somadas para definir a equipe ganhadora.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="rule" id="maquete">
+      <header class="rule-head">
+        <div class="rule-num">4</div>
+        <div><h3>Maquete de uma história das cartas de Paulo</h3><span class="tag">📅 Entrega 29/11</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Entregar no <strong>domingo anterior ao dia 5 de dezembro (29/11)</strong> para a igreja votar.</li>
+          <li>A maquete precisa ter escrita a <strong>referência bíblica</strong> que a inspirou.</li>
+          <li>No dia da votação, cada grupo precisa ter <strong>um representante</strong> no local da exposição para explicar a maquete aos membros da igreja.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="rule" id="entrevista">
+      <header class="rule-head">
+        <div class="rule-num">5</div>
+        <div><h3>Entrevistar um missionário</h3><span class="tag">📅 Compartilhar em 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Entrevistar um missionário que esteja <strong>ativo no campo missionário</strong>.</li>
+          <li>A entrevista pode ser por <strong>vídeo-chamada, meeting, ligação ou troca de áudios pelo WhatsApp</strong>.</li>
+          <li>Durante a conversa, o entrevistador <strong>anota todas as respostas</strong> para depois documentar e entregar as perguntas e respostas de forma organizada.</li>
+          <li>Compartilhar a experiência da entrevista no <strong>dia 5 de dezembro</strong>.</li>
+        </ul>
+        <details>
+          <summary>Ver roteiro das 10 perguntas</summary>
+          <ol>
+            <li>Qual seu nome e sobrenome?</li>
+            <li>Onde nasceu?</li>
+            <li>Quando e como foi o seu chamado para o campo missionário?</li>
+            <li>Qual igreja te enviou para o campo?</li>
+            <li>Qual o projeto que você está atuando e onde?</li>
+            <li>Há quanto tempo você está no seu projeto atual?</li>
+            <li>Compartilhe um momento marcante que viveu no campo missionário.</li>
+            <li>Qual mensagem você gostaria de deixar para a geração atual de jovens e adolescentes sobre o trabalho missionário?</li>
+            <li>Qual pedido de oração você gostaria de fazer?</li>
+            <li>Orar pelo missionário.</li>
+          </ol>
+        </details>
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="rule" id="carta">
+      <header class="rule-head">
+        <div class="rule-num">6</div>
+        <div><h3>Reescrever uma carta de Paulo de próprio punho</h3><span class="tag">📅 Entrega 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Utilizar a <strong>folha padrão</strong> que será entregue pela liderança.</li>
+          <li><strong>Todos do grupo</strong> precisam escrever uma parte. O grupo define a divisão como quiser.</li>
+          <li>No texto, escrever o <strong>título das perícopes</strong>, o <strong>número do capítulo e do versículo</strong>, com a mesma estrutura da Bíblia.</li>
+        </ul>
+        <p class="sub">Qual carta cada grupo escreve?</p>
+        <ul class="groups">
+          <li class="azul">Grupo azul: <span>Efésios</span></li>
+          <li class="verde">Grupo verde: <span>Gálatas</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="rule" id="alimentos">
+      <header class="rule-head">
+        <div class="rule-num">7</div>
+        <div><h3>Arrecadação de alimentos</h3><span class="tag">📅 Entrega até 04/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Entregar no <strong>máximo até o dia 04 de dezembro</strong>.</li>
+          <li>A contagem é por <strong>cada item ou quilo</strong>.</li>
+        </ul>
+        <p class="sub">Exemplos de pontuação</p>
+        <ul class="points">
+          <li><span>Lata de leite em pó, lata de óleo ou pacote de macarrão</span><b>1 ponto</b></li>
+          <li><span>Saco de arroz de 5 kg</span><b>5 pontos</b></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="rule" id="evangelistica">
+      <header class="rule-head">
+        <div class="rule-num">8</div>
+        <div><h3>Preparar uma ação evangelística</h3><span class="tag">📅 Compartilhar em 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li><strong>Escolher o local</strong> e o que vai fazer.</li>
+          <li><strong>Apresentar</strong> a ação, <strong>registrar</strong> e <strong>compartilhar a experiência</strong> no dia 5 de dezembro.</li>
+        </ul>
+        <p class="sub">Sugestões</p>
+        <ul>
+          <li>Entregar folhetos e orar por pessoas em algum local (rua, praça, ponto de ônibus).</li>
+          <li>Marcar de visitar uma escola e dar uma palestra evangelística com louvor.</li>
+          <li>Visitar um projeto social e levar uma palavra.</li>
+          <li>Fazer uma ação evangelística artística no semáforo.</li>
+          <li>Visitar um abrigo.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 9 -->
+    <article class="rule" id="pregacoes">
+      <header class="rule-head">
+        <div class="rule-num">9</div>
+        <div><h3>Anotar as pregações</h3><span class="tag">📅 Entrega até domingo, 23h</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>A <strong>pontuação individual</strong> vai para o grupo.</li>
+          <li><strong>Adolescentes:</strong> anotam no papel entregue no domingo.</li>
+          <li><strong>Jovens:</strong> anotam pelo WhatsApp.</li>
+          <li>Só pode entregar <strong>no domingo, até as 23h</strong>.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 10 -->
+    <article class="rule" id="flashmob">
+      <header class="rule-head">
+        <div class="rule-num">10</div>
+        <div><h3>Gravar um flash mob</h3></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Gravar em <strong>local aberto</strong>, com o <strong>maior número de participantes</strong> do time.</li>
+          <li>Usar uma <strong>música cristã</strong>.</li>
+          <li>O vídeo vai para as <strong>redes sociais</strong> para ser curtido.</li>
+          <li><strong>Duas pontuações:</strong> a entrega do vídeo e as curtidas.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 11 -->
+    <article class="rule" id="desafios">
+      <header class="rule-head">
+        <div class="rule-num">11</div>
+        <div><h3>Desafios das cartas</h3><span class="tag">📅 Dia 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li>Atividades lúdicas valendo pontos, baseadas nas <strong>cartas de Paulo</strong>.</li>
+          <li>Serão diversas atividades de conhecimento sobre <strong>todas as cartas de Paulo</strong>.</li>
+        </ul>
+        <p class="sub">Exemplos de desafios</p>
+        <ul>
+          <li>Monte a imagem.</li>
+          <li>Ache o versículo.</li>
+          <li>Identifique a carta.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 12 -->
+    <article class="rule" id="tribunal">
+      <header class="rule-head">
+        <div class="rule-num">12</div>
+        <div><h3>Simulação do Tribunal</h3></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li><strong>Sorteio na EBD</strong> para saber qual grupo fica com a <strong>defesa</strong> e qual fica com a <strong>acusação</strong>.</li>
+          <li>O caso será uma <strong>situação polêmica</strong> das cartas de Paulo.</li>
+        </ul>
+        <p class="sub">O que vale ponto</p>
+        <ul>
+          <li>Caracterização.</li>
+          <li>Preparação.</li>
+          <li>Citações bíblicas.</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 13 -->
+    <article class="rule" id="acampadentro">
+      <header class="rule-head">
+        <div class="rule-num">13</div>
+        <div><h3>Acampadentro</h3><span class="tag">📅 Dias 04 e 05/12</span></div>
+      </header>
+      <div class="rule-body">
+        <ul>
+          <li><strong>Sexta-feira (04/12):</strong> às 21h.</li>
+          <li><strong>Sábado (05/12):</strong> festa dos personagens da Bíblia ou da cultura pop (filmes, séries, desenhos, animes).</li>
+          <li>Ganha o grupo com as <strong>fantasias mais criativas</strong>.</li>
+        </ul>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  <img src="assets/logo-juvcbo.png" alt="JUVCBO">
+  Gincana 2026 · Juventude CBO
+</footer>
+
+<a class="top" href="#topo" aria-label="Voltar ao topo">↑</a>
+
+</body>
+</html>
